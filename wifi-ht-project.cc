@@ -174,7 +174,7 @@ main(int argc, char** argv)
         long long skewedRate = rate + (rate * 0.000366);
         std::string skewedRateStr = std::to_string(skewedRate) + "bps";
 
-        std::cout << "Simulating at traffic load: " << (rate / 1000) << " Kbps...\n";
+        std::cout << "Simulating at traffic load: " << (rate / 1000000.0) << " Mbps...\n";
         
         // Run the 10-second experiment for this specific load
         experiment(enableRtsCts, wifiManager, constantLossDb, dataRateStr, skewedRateStr, folder);
